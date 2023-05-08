@@ -28,8 +28,8 @@ const Topbar = () => {
                   ml: 2,
                   display: "flex",
                   flex: 1,
-                  placeholder: "search...",
                }}
+               placeholder="Search"
             />
             <IconButton type="button" sx={{ p: 1 }}>
                <SearchIcon />
@@ -38,7 +38,7 @@ const Topbar = () => {
 
          <Box display="flex">
             <IconButton onClick={() => colorMode.toggleColorMode()}>
-               {theme.pallet.mode == "dark" ? (
+               {theme.palette.mode == "dark" ? (
                   <DarkModeOutlined />
                ) : (
                   <LightModeOutlined />
