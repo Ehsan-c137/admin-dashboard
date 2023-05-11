@@ -26,12 +26,6 @@ import {
    MapOutlined,
 } from "@mui/icons-material";
 
-// pro-sidebar-inner = colors.primary[400]
-// pro-icon-wrapper = transparent !important
-// pro-inner-item---> padding: '5px 35px 5px 20px' !important
-// pro-inner-item:hover ---> #868dfb !important
-// pro-menu-item.active ---> #6870fa !important
-
 const Item = ({ title, to, icon, selected, setSelected }) => {
    const theme = useTheme();
    const colors = tokens(theme.palette.mode);
@@ -69,8 +63,11 @@ const Sidebar = () => {
             ".ps-menu-button": {
                transition: "400ms color",
             },
+            overflowY: "scroll",
+            overflowX: "hidden",
          }}
-         height="100%"
+         height="100vh"
+         position="sticky"
       >
          <ProSidebar backgroundColor={colors.primary[400]}>
             <Menu>
