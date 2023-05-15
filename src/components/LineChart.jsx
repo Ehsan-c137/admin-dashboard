@@ -40,7 +40,7 @@ const LineChart = ({ isDashboard = false }) => {
          maxValue={1000}
          valueScale={{ type: "linear" }}
          indexScale={{ type: "band", round: true }}
-         colors={{ scheme: "nivo" }}
+         colors={isDashboard ? { datum: "color" } : { scheme: "nivo" }}
          defs={[
             {
                id: "dots",
@@ -85,15 +85,16 @@ const LineChart = ({ isDashboard = false }) => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: "country",
+            legend: isDashboard ? undefined : "transportation",
             legendPosition: "middle",
             legendOffset: 32,
          }}
          axisLeft={{
+            orient: "left",
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: "food",
+            legend: isDashboard ? undefined : "count",
             legendPosition: "middle",
             legendOffset: -40,
          }}
